@@ -1,6 +1,9 @@
 package com.gertrude.mod;
 
+import com.gertrude.mod.block.BlockWeatherCore;
+
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
@@ -17,8 +20,12 @@ public class WeatherMod {
 		
 		public static final String modid = "WeatherMod";
 		
+		public static Block blockWeatherCore;
+		
 		@Init
 		public void load(FMLInitializationEvent event){
+			blockWeatherCore = new BlockWeatherCore(3713, Material.iron).setUnlocalizedName("weatherBlockCore");
+			registerBlock(blockWeatherCore, blockWeatherCore.getUnlocalizedName(), "Weather Machine Core");
 			
 		}
 		
