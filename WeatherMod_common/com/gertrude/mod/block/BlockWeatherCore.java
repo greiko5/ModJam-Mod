@@ -15,16 +15,11 @@ public class BlockWeatherCore extends Block{
 		super(id, material);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
-	
+    
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister iconRegister)
+	public void registerIcons(IconRegister par1IconRegister)
 	{
-		blockIcon = iconRegister.registerIcon(String.format("%s:%s",WeatherMod.modid.toLowerCase(), getUnwrappedUnloaclizedName(this.getUnlocalizedName())));
-	}
-	
-	protected String getUnwrappedUnloaclizedName( String name)
-	{
-		return name.substring(name.indexOf(".")+1);
+		this.blockIcon = par1IconRegister.registerIcon(WeatherMod.modid + ":" + this.getUnlocalizedName().substring(5));
 	}
 
 }
