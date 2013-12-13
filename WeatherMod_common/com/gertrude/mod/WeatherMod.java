@@ -7,6 +7,7 @@ import com.gertrude.mod.block.BlockWeatherFrame;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -30,6 +31,8 @@ public class WeatherMod {
 		public void load(FMLInitializationEvent event){
 			blockWeatherCore = new BlockWeatherCore(3713, Material.iron).setUnlocalizedName("weatherBlockCore");
 			registerBlock(blockWeatherCore, blockWeatherCore.getUnlocalizedName(), "Weather Machine Core");
+		
+			
 			
 			blockWeatherFrame = new BlockWeatherFrame(3714, Material.iron).setUnlocalizedName("weatherBlockFrame");
 			registerBlock(blockWeatherFrame, blockWeatherFrame.getUnlocalizedName(), "Weather Machine Frame");
@@ -37,6 +40,15 @@ public class WeatherMod {
 			
 			blockWeatherBase = new BlockWeatherBase(3715, Material.iron).setUnlocalizedName("weatherBlockBase");
 			registerBlock(blockWeatherBase, blockWeatherBase.getUnlocalizedName(), "Weather Machine Base");
+			
+			
+				GameRegistry.addRecipe(new ItemStack(blockWeatherCore, 1)new Object[]{
+				"XEX",
+				"WNL",
+				"XBX",
+				'X', blockWeatherBase, 'E',  item.EnderPearl, 'B', block.DiamondBlock, 'W', item.WaterBucket, 'L', item.LavaBucket, 'N', item.NetherStar
+			});
+			
 			
 			
 		}
