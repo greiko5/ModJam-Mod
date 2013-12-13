@@ -1,6 +1,7 @@
 package com.gertrude.mod;
 
 import com.gertrude.mod.block.BlockWeatherCore;
+import com.gertrude.mod.block.BlockWeatherFrame;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -21,11 +22,16 @@ public class WeatherMod {
 		public static final String modid = "WeatherMod";
 		
 		public static Block blockWeatherCore;
+		public static Block blockWeatherFrame;
+		
 		
 		@Init
 		public void load(FMLInitializationEvent event){
 			blockWeatherCore = new BlockWeatherCore(3713, Material.iron).setUnlocalizedName("weatherBlockCore");
 			registerBlock(blockWeatherCore, blockWeatherCore.getUnlocalizedName(), "Weather Machine Core");
+			
+			blockWeatherFrame = new BlockWeatherFrame(3714, Material.iron).setUnlocalizedName("weatherBlockFrame");
+			registerBlock(blockWeatherFrame, blockWeatherFrame.getUnlocalizedName(), "Weather Machine Frame");
 			
 		}
 		
