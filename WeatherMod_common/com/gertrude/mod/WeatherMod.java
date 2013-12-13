@@ -8,14 +8,10 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-
+@Mod(modid = WeatherMod.modid, name = "Weather Mod", version ="Pre-Alpha v0.0.1")
+	@NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class WeatherMod {
 	
-
-	
-	@Mod(modid = HologramMod.modid, name = "Weather Mod", version ="Pre-Alpha v0.0.1")
-	@NetworkMod(clientSideRequired = true, serverSideRequired = false)
-	public class HologramMod {
 		
 		public static final String modid = "WeatherMod";
 		
@@ -34,5 +30,5 @@ public class WeatherMod {
 			LanguageRegistry.addName(item, name);
 		}
 
-	}
 }
+
