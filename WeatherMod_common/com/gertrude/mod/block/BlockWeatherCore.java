@@ -13,6 +13,11 @@ public class BlockWeatherCore extends Block{
 
 	public BlockWeatherCore(int id, Material material) {
 		super(id, material);
+		
+		
+		this.setHardness(3.0F);
+		this.setResistance(20F);
+		this.setStepSound(Block.soundMetalFootstep);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
     
