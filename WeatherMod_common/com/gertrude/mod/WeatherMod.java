@@ -1,5 +1,6 @@
 package com.gertrude.mod;
 
+import com.gertrude.mod.block.BlockWeatherBase;
 import com.gertrude.mod.block.BlockWeatherCore;
 import com.gertrude.mod.block.BlockWeatherFrame;
 
@@ -23,7 +24,7 @@ public class WeatherMod {
 		
 		public static Block blockWeatherCore;
 		public static Block blockWeatherFrame;
-		
+		public static Block blockWeatherBase;
 		
 		@Init
 		public void load(FMLInitializationEvent event){
@@ -32,6 +33,11 @@ public class WeatherMod {
 			
 			blockWeatherFrame = new BlockWeatherFrame(3714, Material.iron).setUnlocalizedName("weatherBlockFrame");
 			registerBlock(blockWeatherFrame, blockWeatherFrame.getUnlocalizedName(), "Weather Machine Frame");
+			
+			
+			blockWeatherBase = new BlockWeatherBase(3715, Material.iron).setUnlocalizedName("weatherBlockBase");
+			registerBlock(blockWeatherBase, blockWeatherBase.getUnlocalizedName(), "Weather Machine Base");
+			
 			
 		}
 		
