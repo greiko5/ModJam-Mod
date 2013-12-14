@@ -42,12 +42,11 @@ public class WeatherMod {
 			registerBlock(blockWeatherBase, blockWeatherBase.getUnlocalizedName(), "Weather Machine Base");
 			
 			
-				GameRegistry.addRecipe(new ItemStack(blockWeatherCore, 1)new Object[]{
+				GameRegistry.addRecipe(new ItemStack(blockWeatherCore, 1), new Object[]{
 				"XEX",
 				"WNL",
 				"XBX",
-				'X', blockWeatherBase, 'E',  item.EnderPearl, 'B', block.DiamondBlock, 'W', item.WaterBucket, 'L', item.LavaBucket, 'N', item.NetherStar
-			});
+				'X', blockWeatherBase, 'E', Item.enderPearl , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar});
 			
 			
 			
