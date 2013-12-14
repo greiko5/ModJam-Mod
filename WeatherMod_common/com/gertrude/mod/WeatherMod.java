@@ -29,6 +29,7 @@ public class WeatherMod {
 		
 		@Init
 		public void load(FMLInitializationEvent event){
+			//////////////////////////////////////Blocks/////////////////////////////////////////////////////
 			blockWeatherCore = new BlockWeatherCore(3713, Material.iron).setUnlocalizedName("weatherBlockCore");
 			registerBlock(blockWeatherCore, blockWeatherCore.getUnlocalizedName(), "Weather Machine Core");
 		
@@ -41,12 +42,13 @@ public class WeatherMod {
 			blockWeatherBase = new BlockWeatherBase(3715, Material.iron).setUnlocalizedName("weatherBlockBase");
 			registerBlock(blockWeatherBase, blockWeatherBase.getUnlocalizedName(), "Weather Machine Base");
 			
-			
+			/////////////////////////////////////////Recipe/////////////////////////////////////////////////////
+				
 				GameRegistry.addRecipe(new ItemStack(blockWeatherCore, 1), new Object[]{
 				"XEX",
 				"WNL",
 				"XBX",
-				'X', blockWeatherBase, 'E', Item.enderPearl , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar});
+				'X', blockWeatherFrame, 'E', Item.enderPearl , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar});
 				
 				
 				GameRegistry.addRecipe(new ItemStack(blockWeatherBase, 1), new Object[]{
@@ -54,6 +56,14 @@ public class WeatherMod {
 					"YLY",
 					"XYX",
 					'X', Item.ingotIron, 'Y', Block.stone, 'L', Block.blockLapis});
+				
+				GameRegistry.addRecipe(new ItemStack(blockWeatherFrame, 1), new Object[]{
+					"XRX",
+					"GDG",
+					"XRX",
+					'X', blockWeatherBase, 'D', Item.diamond, 'G', Item.ingotGold, 'R', Item.redstone});
+				
+				
 			
 			
 			
