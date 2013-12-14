@@ -3,6 +3,7 @@ package com.gertrude.mod;
 import com.gertrude.mod.block.BlockWeatherBase;
 import com.gertrude.mod.block.BlockWeatherCapa;
 import com.gertrude.mod.block.BlockWeatherCore;
+import com.gertrude.mod.block.BlockWeatherCrystal;
 import com.gertrude.mod.block.BlockWeatherFrame;
 
 import net.minecraft.block.Block;
@@ -28,6 +29,7 @@ public class WeatherMod {
 		public static Block blockWeatherFrame;
 		public static Block blockWeatherBase;
 		public static Block blockWeatherCapa;
+		public static Block blockWeatherCrystal;
 		
 		@Init
 		public void load(FMLInitializationEvent event){
@@ -46,6 +48,10 @@ public class WeatherMod {
 			
 			blockWeatherCapa = new BlockWeatherCapa(3716, Material.iron).setUnlocalizedName("weatherBlockCapa");
 			registerBlock(blockWeatherCapa, blockWeatherCapa.getUnlocalizedName(), "Weather Machine Capacitor");
+			
+			
+			blockWeatherCrystal = new BlockWeatherCrystal(3717, Material.iron).setUnlocalizedName("weatherBlockCrystal");
+			registerBlock(blockWeatherCrystal, blockWeatherCrystal.getUnlocalizedName(), "Weather Machine Projection Crystal");
 			
 			
 			/////////////////////////////////////////Recipe/////////////////////////////////////////////////////
@@ -76,7 +82,11 @@ public class WeatherMod {
 					"XYX",
 					'X', blockWeatherBase, 'Y', Item.redstone, 'W', Block.blockRedstone});
 				
-				
+				GameRegistry.addRecipe(new ItemStack(blockWeatherCrystal, 2), new Object[]{
+					"XYX",
+					"GEG",
+					"DYD",
+					'X', Block.daylightSensor, 'Y', Block.glass, 'G', Block.glowStone, 'D', Item.diamond, 'E', Item.enderPearl});
 				
 			
 			
