@@ -1,6 +1,7 @@
 package com.gertrude.mod;
 
 import com.gertrude.mod.block.BlockWeatherBase;
+import com.gertrude.mod.block.BlockWeatherCapa;
 import com.gertrude.mod.block.BlockWeatherCore;
 import com.gertrude.mod.block.BlockWeatherFrame;
 
@@ -26,6 +27,7 @@ public class WeatherMod {
 		public static Block blockWeatherCore;
 		public static Block blockWeatherFrame;
 		public static Block blockWeatherBase;
+		public static Block blockWeatherCapa;
 		
 		@Init
 		public void load(FMLInitializationEvent event){
@@ -41,6 +43,10 @@ public class WeatherMod {
 			
 			blockWeatherBase = new BlockWeatherBase(3715, Material.iron).setUnlocalizedName("weatherBlockBase");
 			registerBlock(blockWeatherBase, blockWeatherBase.getUnlocalizedName(), "Weather Machine Base");
+			
+			blockWeatherCapa = new BlockWeatherCapa(3716, Material.iron).setUnlocalizedName("weatherBlockCapa");
+			registerBlock(blockWeatherCapa, blockWeatherCapa.getUnlocalizedName(), "Weather Machine Capacitor");
+			
 			
 			/////////////////////////////////////////Recipe/////////////////////////////////////////////////////
 				
