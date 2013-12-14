@@ -36,13 +36,13 @@ public class WeatherMod {
 			registerBlock(blockWeatherCore, blockWeatherCore.getUnlocalizedName(), "Weather Machine Core");
 		
 			
-			
 			blockWeatherFrame = new BlockWeatherFrame(3714, Material.iron).setUnlocalizedName("weatherBlockFrame");
 			registerBlock(blockWeatherFrame, blockWeatherFrame.getUnlocalizedName(), "Weather Machine Frame");
 			
 			
 			blockWeatherBase = new BlockWeatherBase(3715, Material.iron).setUnlocalizedName("weatherBlockBase");
 			registerBlock(blockWeatherBase, blockWeatherBase.getUnlocalizedName(), "Weather Machine Base");
+		
 			
 			blockWeatherCapa = new BlockWeatherCapa(3716, Material.iron).setUnlocalizedName("weatherBlockCapa");
 			registerBlock(blockWeatherCapa, blockWeatherCapa.getUnlocalizedName(), "Weather Machine Capacitor");
@@ -68,6 +68,14 @@ public class WeatherMod {
 					"GDG",
 					"XRX",
 					'X', blockWeatherBase, 'D', Item.diamond, 'G', Item.ingotGold, 'R', Item.redstone});
+				
+				
+				GameRegistry.addRecipe(new ItemStack(blockWeatherCapa, 1), new Object[]{
+					"XYX",
+					"XWX",
+					"XYX",
+					'X', blockWeatherBase, 'Y', Item.redstone, 'W', Block.blockRedstone});
+				
 				
 				
 			
