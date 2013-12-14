@@ -60,23 +60,23 @@ public class WeatherMod {
 				"XEX",
 				"WNL",
 				"XBX",
-				'X', blockWeatherFrame, 'E', Item.enderPearl , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar});
+				'X', blockWeatherFrame, 'E', blockWeatherCrystal , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar});
 				
 				
-				GameRegistry.addRecipe(new ItemStack(blockWeatherBase, 1), new Object[]{
+				GameRegistry.addRecipe(new ItemStack(blockWeatherBase, 4), new Object[]{
 					"XYX",
 					"YLY",
 					"XYX",
 					'X', Item.ingotIron, 'Y', Block.stone, 'L', Block.blockLapis});
 				
-				GameRegistry.addRecipe(new ItemStack(blockWeatherFrame, 1), new Object[]{
+				GameRegistry.addRecipe(new ItemStack(blockWeatherFrame, 2), new Object[]{
 					"XRX",
 					"GDG",
 					"XRX",
 					'X', blockWeatherBase, 'D', Item.diamond, 'G', Item.ingotGold, 'R', Item.redstone});
 				
 				
-				GameRegistry.addRecipe(new ItemStack(blockWeatherCapa, 1), new Object[]{
+				GameRegistry.addRecipe(new ItemStack(blockWeatherCapa, 2), new Object[]{
 					"XYX",
 					"XWX",
 					"XYX",
