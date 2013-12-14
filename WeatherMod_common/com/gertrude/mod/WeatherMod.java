@@ -47,6 +47,13 @@ public class WeatherMod {
 				"WNL",
 				"XBX",
 				'X', blockWeatherBase, 'E', Item.enderPearl , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar});
+				
+				
+				GameRegistry.addRecipe(new ItemStack(blockWeatherBase, 1), new Object[]{
+					"XYX",
+					"YLY",
+					"XYX",
+					'X', Item.ingotIron, 'Y', Block.stone, 'L', Block.blockLapis});
 			
 			
 			
