@@ -20,6 +20,11 @@ public class BlockWeatherCrystal extends Block{
 		this.setStepSound(Block.soundMetalFootstep);
 		this.setLightValue(.95F);
 		this.setCreativeTab(CreativeTabs.tabBlock);
+		
+		
+		
+			
+		
 	}
     
 	@SideOnly(Side.CLIENT)
