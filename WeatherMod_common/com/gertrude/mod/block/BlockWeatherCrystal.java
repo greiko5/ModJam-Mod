@@ -18,7 +18,7 @@ public class BlockWeatherCrystal extends Block{
 		this.setHardness(2.0F);
 		this.setResistance(10F);
 		this.setStepSound(Block.soundMetalFootstep);
-		this.setLightValue(.095F);
+		this.setLightValue(.95F);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
     

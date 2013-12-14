@@ -59,8 +59,8 @@ public class WeatherMod {
 				GameRegistry.addRecipe(new ItemStack(blockWeatherCore, 1), new Object[]{
 				"XEX",
 				"WNL",
-				"XBX",
-				'X', blockWeatherFrame, 'E', blockWeatherCrystal , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar});
+				"YBY",
+				'X', blockWeatherFrame, 'E', blockWeatherCrystal , 'B', Block.blockDiamond, 'W', Item.bucketWater, 'L', Item.bucketLava, 'N', Item.netherStar, 'Y', blockWeatherCapa});
 				
 				
 				GameRegistry.addRecipe(new ItemStack(blockWeatherBase, 4), new Object[]{
@@ -82,7 +82,7 @@ public class WeatherMod {
 					"XYX",
 					'X', blockWeatherBase, 'Y', Item.redstone, 'W', Block.blockRedstone});
 				
-				GameRegistry.addRecipe(new ItemStack(blockWeatherCrystal, 2), new Object[]{
+				GameRegistry.addRecipe(new ItemStack(blockWeatherCrystal, 1), new Object[]{
 					"XYX",
 					"GEG",
 					"DYD",
