@@ -59,8 +59,4 @@ public class BlockWeatherCapa extends Block{
     }
     }
     
-    public TileEntity createNewTileEntity(World world)
-	{
-		return new TileEntityCapa();
-	}
 }

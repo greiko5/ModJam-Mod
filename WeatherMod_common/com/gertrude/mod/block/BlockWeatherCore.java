@@ -29,10 +29,7 @@ public class BlockWeatherCore extends Block{
 		this.blockIcon = par1IconRegister.registerIcon(WeatherMod.modid + ":" + this.getUnlocalizedName().substring(5));
 	}
 	
-	
-	public TileEntity createNewTileEntity(World world)
-	{
-		return new TileEntityCore();
-	}
+
+
 
 }

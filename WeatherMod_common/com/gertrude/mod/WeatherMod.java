@@ -5,11 +5,15 @@ import com.gertrude.mod.block.BlockWeatherCapa;
 import com.gertrude.mod.block.BlockWeatherCore;
 import com.gertrude.mod.block.BlockWeatherCrystal;
 import com.gertrude.mod.block.BlockWeatherFrame;
+import com.gertrude.mod.block.BlockweatherMachine;
+import com.gertrude.mod.block.TileEntityWeatherMachine;
+import com.gertrude.mod.block.rendererWeatherMachine;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -30,7 +34,7 @@ public class WeatherMod {
 		public static Block blockWeatherBase;
 		public static Block blockWeatherCapa;
 		public static Block blockWeatherCrystal;
-		
+		public static Block blockWeatherMachine;
 		@Init
 		public void load(FMLInitializationEvent event){
 			//////////////////////////////////////Blocks/////////////////////////////////////////////////////
@@ -53,6 +57,9 @@ public class WeatherMod {
 			blockWeatherCrystal = new BlockWeatherCrystal(3717, Material.iron).setUnlocalizedName("weatherBlockCrystal");
 			registerBlock(blockWeatherCrystal, blockWeatherCrystal.getUnlocalizedName(), "Weather Machine Projection Crystal");
 			
+
+			blockWeatherMachine = new BlockweatherMachine(3718, Material.iron).setUnlocalizedName("weatherBlockMachine");
+			registerBlock(blockWeatherMachine, blockWeatherMachine.getUnlocalizedName(), "Weather Machine");
 			
 			/////////////////////////////////////////Recipe/////////////////////////////////////////////////////
 				
@@ -88,6 +95,9 @@ public class WeatherMod {
 					"DYD",
 					'X', Block.daylightSensor, 'Y', Block.glass, 'G', Block.glowStone, 'D', Item.diamond, 'E', Item.enderPearl});
 				
+				GameRegistry.registerTileEntity(TileEntityWeatherMachine.class, "weatherMachine");
+
+				ClientRegistry.bindTileEntitySpecialRenderer(TileEntityWeatherMachine.class, new rendererWeatherMachine());
 			
 			
 			
